@@ -81,12 +81,5 @@ plugins=(
 
 source $ZSH/oh-my-zsh.sh
 
-# Fix for Intellij terminal
-bindkey "\e\eOD" backward-word
-bindkey "\e\eOC" forward-word
-
-eval "$(pyenv init -)"
-
 source .alias
-
 source .path
