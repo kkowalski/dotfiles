@@ -81,5 +81,5 @@ plugins=(
 
 source $ZSH/oh-my-zsh.sh
 
-source .alias
-source .path
+source ~/.alias
+source ~/.path
