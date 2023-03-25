@@ -1,0 +1,33 @@
+[user]
+	name = Chris Kowalski
+	email = chrisk@worldcoin.org
+  signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIOPuuwze9H1CxgFZh5iIAUtG43x2SpO5seS2N2qyQCIQ
+
+[gpg]
+  format = ssh
+
+[gpg "ssh"]
+  program = "/Applications/1Password.app/Contents/MacOS/op-ssh-sign"
+
+[commit]
+	gpgsign = true
+
+[url "git@github.com:"]
+	insteadOf = https://github.com/
+[net]
+git-fetch-with-cli = true
+
+[core]
+	excludesfile = /Users/chris/.gitignore
+	autocrlf = input
+[push]
+	default = current
+[filter "lfs"]
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+[pull]
+	rebase = true
+[init]
+	defaultBranch = main
